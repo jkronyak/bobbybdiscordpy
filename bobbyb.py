@@ -21,7 +21,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if 'bobby b' in message.content.lower() or 'bobbyb' in message.content.lower() \
+    if 'booby b' in message.content.lower() or 'boobyb' in message.content.lower():
+        await message.channel.send("THANK THE GODS FOR BESSIE AND HER TITS!")
+    elif 'bobby b' in message.content.lower() or 'bobbyb' in message.content.lower() \
             or client.user in message.mentions:
         await message.channel.send(get_random_quote())
 
