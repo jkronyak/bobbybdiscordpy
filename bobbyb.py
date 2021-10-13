@@ -11,6 +11,7 @@ client = discord.Client()
 quotes = []
 logging.basicConfig(level=logging.INFO)
 
+
 async def on_ready():
     print('Logged in as  {0.user}'.format(client))
 
@@ -20,7 +21,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if 'bobby b' in message.content.lower() or 'bobbyb' in message.content.lower():
+    if 'bobby b' in message.content.lower() or 'bobbyb' in message.content.lower() \
+            or client.user in message.mentions:
         await message.channel.send(get_random_quote())
 
 
